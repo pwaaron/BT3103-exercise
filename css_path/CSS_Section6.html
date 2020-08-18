@@ -1,0 +1,37 @@
+<!-- https://codepen.io/matheusaaron/pen/OJNXERp -->
+
+<html>
+<head>
+<style>
+  [title*="BT"] {
+    background-color: yellow;
+  }
+  
+  [title|="BT"] {
+    font-size: 200%;
+  }
+
+  [title^="BT"] {
+    color: red;
+  }
+
+</style>
+</head>
+<body>
+	<h1>Create five <\p> tags with title of "BT3103", "BT", "BT3", "BT-3103", "BT 3103".</h1> 
+	Style them as below:
+
+	<ul>
+		<li>set the background color of elements with an attribute value containing "BT" as yellow</li>
+		<li>set elements with the specified attribute starting with "BT" font size as 200%</li>
+		<li>set the color of elements whose attribute value begins with "BT" as red</li>
+	</ul>
+  	
+  	<p title="BT3103"> BT3103 </p>
+  	<p title="BT"> BT</p>
+  	<p title="BT3"> BT3</p>
+  	<p title="BT-3103">BT-3103</p>
+  	<p title="BT 3103">BT 3103</p>
+
+</body>
+</html>
