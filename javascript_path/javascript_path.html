@@ -1,0 +1,107 @@
+<!-- CodePen.io Link : https://codepen.io/matheusaaron/pen/bGpqgBW-->
+
+<html>
+<body>
+
+<br><br>Exercise 1----------------------------------------------------------------<br><br>
+
+//enter your code for exercise 1 here => name <p> id as "demo1"
+<div id="demo1"></div>
+<script>
+  document.getElementById("demo1").style.fontSize = "35px";
+  document.getElementById("demo1").innerHTML = "My First JavaScript";
+</script>
+
+<br><br>Exercise 2----------------------------------------------------------------<br><br>
+
+//enter your code for exercise 2 here => name <p> id as "demo2"
+<p id="demo2">Change my color</p>
+
+<button type="button" onclick='turnRed()'>Red</button>
+<button type="button" onclick='turnBlue()'>Blue</button>
+
+<script>
+  function turnRed() {
+    document.getElementById("demo2").style.color = "red";
+  }
+
+  function turnBlue() {
+    document.getElementById("demo2").style.color = "blue";
+  }
+</script>
+<br><br>Exercise 3----------------------------------------------------------------<br><br>
+
+//enter your code for exercise 3 here => name <p> id as "demo3"
+<p id="demo3"></p>
+
+<script>
+function show(){
+    var name = "John";
+    document.getElementById("demo3").innerHTML = "Hello, " + name + "!!!";
+}
+</script>
+
+<button type="button" onclick='show()'>Show</button>
+
+<br><br>Exercise 4----------------------------------------------------------------<br><br>
+
+//enter your code for exercise 4 here => name <p> id as "demo4"
+Enter your name: <input type="text" name="txt" onchange="myFunction(this.value)">
+<p id="demo4"></p>
+
+<script>
+function myFunction(name){
+  document.getElementById("demo4").innerHTML = "Hello, " + name + "!!!";;
+}
+</script>
+
+<br><br>Exercise 5----------------------------------------------------------------<br><br>
+
+//enter your code for exercise 5 here => name <p> id as "demo5"
+<p id="demo5"></p>
+
+<script>
+// Create an object:
+var person = {
+  firstName: "John",
+  lastName : "Doe",
+  id       : 5566,
+  fullName : function() {
+    return this.firstName + " " + this.lastName;
+  },
+  date     : 9,
+  month    : "May",
+  DOB      : function(){
+    return this.date + " " + this.month;
+  }
+};
+// Display data from the object:
+document.getElementById("demo5").innerHTML = "ID:  " + person.id + "<br>Full Name:  " + person.fullName() + "<br>Date of Birth: " + person.DOB();
+</script>
+
+<br><br>Exercise 6----------------------------------------------------------------<br><br>
+
+//enter your code for exercise 6 here => name <p> id as "demo6"
+<html>
+<body>
+ 
+Is this even or odd?: <input type="text" name="txt" onchange="myNumber(this.value)">
+<p id="demo6"></p>
+
+<script>
+function myNumber(val) {
+  if (val%2==0) {
+    document.getElementById("demo6").innerHTML = "Even";
+    return "Even";
+  } else {
+    document.getElementById("demo6").innerHTML = "Odd";
+  }
+    
+}
+</script>
+
+</body>
+</html>
+
+</body>
+</html>

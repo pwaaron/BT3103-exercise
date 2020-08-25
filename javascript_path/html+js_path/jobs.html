@@ -1,0 +1,88 @@
+<html>
+<head>
+<title>BBTBABY</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+  <script>
+    function showName(name){
+        
+        var cnt = 0; 
+        for (x of name) {
+          if (x != ' '){
+            cnt = cnt + 1;
+          }
+        }
+
+        document.getElementById("show_name").innerHTML = "Your name is confirmed as " + name + ". Length is " + cnt;
+    }
+
+    function showEmail(email){
+        document.getElementById("show_email").innerHTML = "Your email is confirmed as " + email + ".";
+    }
+
+    function turnRed() {
+        document.getElementById("notifications").style.color = "red";
+      }
+
+    function turnBlue() {
+        document.getElementById("notifications").style.color = "blue";
+      }
+
+    function submitAlert(){
+      alert("Form successfully submitted!");
+    }
+  </script>
+
+  <header>
+    <h1>BEST BUBBLE</h1>
+    <h3> <i> BUBBLE TEA SHOP</i> </h3>
+  </header>
+  
+  <section>
+    <nav>
+      <p> <a href='index.html'>Home</a><br>
+          <a href='menu.html'>Menu</a><br>
+          <a href='music.html'>Music</a><br>
+          <a href='jobs.html'>Jobs</a>
+      </p>
+    </nav>
+      
+    <div id="content">
+      <h1>Jobs at Best Bubble</h1>
+      <p>Want to work at BestBubble? Fill out the form below to start your application.</p>
+      <form>
+        <label for="name">Name:</label><br>
+        <input type="text" name="name" onchange="showName(this.value)" required><br>
+        <p id="show_name"></p>
+        <br>
+        <label for="email">Email:</label><br>
+        <input type="email" name="email" onchange="showEmail(this.value)"required><br>
+        <p id="show_email"></p>
+        <br>
+        <label for="startdate">Start date:</label><br>
+        <input type="date" name="startdate" required><br>
+        <br>
+        <label for="exp">Experience:</label><br>        
+        <textarea name="exp" rows="10" cols="60" required></textarea><br>
+        <br>
+        <button type="submit" value="Submit" onclick="submitAlert()"> Submit </button>
+      </form>
+      
+      
+      <p id="notifications">Do you want to be notified by email about BestBubble promotions?</p>
+
+      <button type="button" onclick='turnRed()'>Yes</button> <button type="button" onclick='turnBlue()'>No</button>
+
+    </div>
+  </section>
+
+  <footer>
+    <p><i>Copyright (c) 2020 Best Bubble Tea Shop</p>
+    <p><a href="mailto:BT3103@bubbletea.com">  BT3103@bubbletea.com </p> </a>
+       </i>
+  </footer>
+
+</body>
+</html>
